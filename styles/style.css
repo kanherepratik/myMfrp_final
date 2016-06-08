@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("../assets/fonts/glyphicons-halflings-regular.eot");
+    src: url("../assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("../assets/fonts/glyphicons-halflings-regular.ttf") format("truetype")
+}
+.bg {
+    background-image: url('../assets/images/headerbg.png');
+}
+header img {
+    float: right;
+    margin: 12px 12px 0px 0;
+    width: 320px;
+    height: 84px;
+}
+header .row.logo {
+    margin-bottom: 0;
+}
+#heading {
+    padding: 12px 0 12px 30px;
+    background-color: #0d9c49;
+    font-size: 14px;
+    color: white;
+    margin-top: 0;
+    font-weight: bold;
+}
+#header_user #name {
+    color: #e0770e;
+    font-size: 12px;
+    font-weight: bold;
+}
+#header_user #role {
+    color: #747373;
+    font-size: 12px;
+    font-weight: bold;
+}
+#header_user #role {
+    color: #0616b1;
+    font-size: 12px;
+}
+main > .container {
+    background-color: #f7f7f7;
+}
+.clear {
+    clear: both;
+}
+.up {
+    padding-bottom: 15px;
+    background-color: #0a67af;
+}
+.login label {
+    width: 143px;
+}
+.wrap {
+    border: 1px solid #9a9696;
+    width: 450px;
+    margin: 90px auto;
+}
+.wrap > h2 {
+    margin: 24px 0 30px 23px;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 15px;
+}
+.login .rem_btns {
+    margin-left: 70px;
+}
+.login label {
+    width: 28.42%;
+}
+#pwd, #email {
+    width: 200px;
+}
+.login_btn {
+    border: 1px solid #3e6a93;
+    background: linear-gradient(#fdfeff, #dee0e6, #c7c9ce);
+    margin-bottom: 25px;
+}
+.indicator {
+    margin-right: 1%;
+}
+.panel_body {
+    margin-left: 1%;
+}
+.panel-heading {
+    background-color: #d7d4d4;
+}
+.panel-heading a {
+    color: #3e3f40;
+    font-weight: bold;
+}
+.acordian_wrap {
+    width: 94%;
+    margin: 0 auto;
+}
+footer > .container {
+    background-color: #9f9fa0;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    font-weight: bold;
+    font-family: verdana;
+}
+.employeeDetails {
+    padding: 0px;
+}
+
+.detailsDisplay {
+        margin: 139px 0 0 7px; /*62% 0 0 3%;*/
+		width: 87%;
+}
+
+
+.col-md-2.col-xs-2.col-sm-2.col-lg-2.gap {
+    width: 8%;
+}
+/*employee_list and resource_request*/
+
+.container{
+    background-color: #f7f7f7;
+}
+.drop {
+    width: 56.21%;
+    padding: 5px 0 0 0;
+}
+input[type="text"],
+textarea,
+input[type="number"] {
+    width: 56.21%;
+}
+textarea {
+    padding: 50px 0 0 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+.container .row {
+    margin-bottom: 14px;
+}
+#radio2 {
+    margin-left: 20px;
+}
+h5 {
+    font-size: 14px;
+    text-decoration: underline;
+}
+#save {
+    margin-left: 38%;
+}
+.check {
+    width: 42.66%;
+}
+.image-section {
+    width: 91.26%;
+    margin-right: 1.960%;
+    margin-top: 6%;
+}
+.tb1 {
+    margin-top: 60px;
+}
+.tb1 th,
+td {
+    text-align: center;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: lightgrey;
+}
+.table-striped>thead>tr>th {
+    background-color: lightgrey;
+}
+.tbInResource th {
+    font-weight: bold;;
+}
+.tbInResource img, #logout {
+    cursor: pointer;
+}
+div >.ngmsg {
+    font-size: 12px;
+    font-style: italic;
+    position: absolute;
+    width: 230px;
+}
+/*employee_list and resource_request ends...........*/
+.id_card {
+    background-image: url('../assets/images/card.png');
+    min-height: 420px;
+    background-repeat: no-repeat;
+}
+.nameNpic{
+    position: relative;
+}
+.picOfemployee {
+    position: absolute;
+    margin: 132px 0 0 34px;
+
+    max-height: 69%;
+}
+.idNname {
+    position: absolute;
+    margin-top: 257px; /*117%;*/
+    width: 182px; /*88%;*/
+    /*padding-right: 6%;*/
+}
+.idNname p:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+.idNname p:last-child {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+.test {
+    margin-top: 9%;
+}
+.btn1 {
+    padding: 12px 10px 15px 12px;
+  
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #747373;
+    border: 1px solid grey;
+}
+
+/*.btn1:focus, .btn3:focus{
+    padding-top: 18px;
+}*/
+.btn3 {
+    padding: 12px 39px 14px 35px;
+    
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #747373;
+    text-align: center;
+    border: 1px solid grey;
+}
+/*idcard css*/
+.idCard {
+    border: 1px solid red;
+}
+
+.idCard p{
+   
+}
+
+.empImage {
+    margin-bottom: 108px;
+}
+.displayName {
+    margin-bottom: 70px;
+    text-shadow:none;
+}
+.displayName >p {
+     color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+.displayID{
+    margin-bottom: 40px;
+    text-shadow:none;
+
+}
+.displayID > p {
+     color: #000;
+    font-size: 20px;
+    font-weight: bold;
+  
+
+}
+.subId {
+    font-weight: bold;
+    color: #000;
+    margin-left: 18px;
+   
+}
+.subContact {
+    font-size: 12px;
+    color: #000;
+   
+}
+.empBlood, .empAddress {
+    font-size: 12px;
+    color: #000;  
+}

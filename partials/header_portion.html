@@ -1,0 +1,11 @@
+<p>
+	<span id="name">Welcome {{userName}}</span>
+	<span id="role">[ {{userRole}} ]</span>
+	<span id="logout" ng-click="adminLogout($event)">Logout</span>
+</p>
+
+<div  class="test">
+	<button class="btn1" ui-sref="emp" id="btnId1"  ng-if="userRole=='HR-Manager' || userRole == 'HR-Staff' ">Employee List</button>
+	<button class="btn1" id="btnId2" ui-sref="resource" ng-if="userRole=='HR-Manager' || userRole == 'Manager' " >Resource List</button>
+	<button class="btn3" id="btnId3" ui-sref="FAQ"   >FAQ</button>
+</div>

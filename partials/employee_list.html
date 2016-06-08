@@ -1,0 +1,171 @@
+
+   
+<div class="row">
+    <div >
+        <h3 id="heading">Add / Update an Employee </h3>
+    </div>
+</div>
+<form class="col-md-6 col-xs-6 col-sm-6 col-lg-6 form-horizontal" name="empForm" ng-model="empForm" role="form"  novalidate>
+    <h5>Profile:</h5>
+    <div class="row">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label for="Id">Employee ID:</label>
+        </div>
+        <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="text" name="Id"  ng-model="employee.employeeId" ng-disabled="idDisable" required ng-maxlength="6" ng-blur=blur($event) ng-pattern="/[0-9]{6}/"/>
+            <div ng-messages="empForm.Id.$error"  ng-if="empForm.Id.$touched" style="color:red" role="alert" multiple>
+                <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Employee ID</div>
+                <div ng-message="maxlength" class="ngmsg"><sup>*</sup>You Reached The Maximum Length</div>
+                <div ng-message="pattern" class="ngmsg"><sup>*</sup>Id must be six digits</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label for="name">Employee Name:</label>
+        </div>
+        <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="text" name="name" ng-model="employee.employeeName" required ng-maxlength="18" ng-pattern="/[a-zA-Z]/"/>
+            <div ng-messages="empForm.name.$error" ng-if="empForm.name.$touched" style="color:red" role="alert" multiple>
+                <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Username</div>
+                <div ng-message="maxlength" class="ngmsg"><sup>*</sup>You Reached The Maximum Length</div>
+                <div ng-message="pattern" class="ngmsg"><sup>*</sup>Please Enter only Alphabets</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label for="title">Title:</label>
+        </div>
+        <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 ">
+            <select class="drop" ng-model="employee.title" name="title" required>
+                <option></option>
+                <option>PM</option>
+                <option>PAT</option>
+                <option>PA</option>
+                <option>TL</option>
+            </select>
+            <div ng-messages="empForm.title.$error" ng-if="empForm.title.$touched" style="color:red" role="alert" multiple>
+                <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter The Field</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label>Position:</label>
+        </div>
+        <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="radio" value="On-site" name="position" id="radio1" ng-model="employee.position" checked>On Site
+            
+                <input type="radio" name="position" value="Off-shore" id="radio2" ng-model="employee.position">Off shore
+         
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                    <label for="comp">Competency:</label>
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                    <select class="drop" ng-model="employee.competency" name="drop" required>
+                        <option></option>
+                        <option>CI Web</option>
+                        <option>CI RIA</option>
+                    </select>
+                    <div ng-messages="empForm.drop.$error" ng-if="empForm.drop.$touched" style="color:red" role="alert">
+                        <div ng-message="required" class="ngmsg"><sup>*</sup>Please Select Your Competency</div>
+                    </div>
+                </div>
+            </div>
+            <h5>Emergency Contact:</h5>
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                    <label for="contact">Contact No:</label>
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                    <input  type="text" name="contact" ng-model="employee.ContactNo" required ng-maxlength="10" ng-pattern="/[0-9]{10}/"/>
+                    <div ng-messages="empForm.contact.$error" ng-if="empForm.contact.$touched" style="color:red" role="alert" multiple>
+                        <div ng-message="pattern" class="ngmsg"><sup>*</sup>Please Enter a proper Contact number</div>
+                        <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Contact No.</div>
+                        <div ng-message="maxlength" class="ngmsg"><sup>*</sup>Please Enter Valid Contact No.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                    <label for="blood">Blood Group:</label>
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                    <input type="text" name="blood" ng-model="employee.BloodGroup" ng-pattern="/[a || b || o ||A ||B || O]{1,}[+ || -]{1}$/" required ng-maxlength="3"/>
+                    <div ng-messages="empForm.blood.$error" ng-if="empForm.blood.$touched" style="color:red" role="alert" multiple>
+                        <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Blood Group</div>
+                        <div ng-message="maxlength" class="ngmsg"><sup>*</sup>Please Enter Valid Data</div>
+                        <div ng-message="pattern" class="ngmsg"><sup>*</sup>Invalid blood group</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                    <label for="adr">Address:</label>
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                    <textarea name="adr" required ng-model="employee.Address"></textarea>
+                    <div ng-messages="empForm.adr.$error" ng-if="empForm.adr.$touched" style="color:red" role="alert">
+                        <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Address</div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default" ng-if="saveBtn" ng-model="$parent.saveBtn" id="save" ng-click="addData()" ng-disabled ="empForm.$invalid">Save</button>
+            <button type="submit" class="btn btn-default" ng-if="updateBtn"  ng-model="$parent.updateBtn" id="save" ng-click="addData()" ng-disabled ="empForm.$invalid">Update</button>
+            <button type="reset" class="btn btn-default" ng-click="reset()">Reset</button>
+        </form>
+        <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 id_card">
+            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 nameNpic">
+                <div class="picOfemployee">
+                    <img src="{{employee.img}}">
+                    </div>
+                    <div class="idNname">
+                        <p>{{employee.employeeName | uppercase}}</p>
+                        <p>{{employee.employeeId}}</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 gap"></div>
+                <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5 employeeDetails">
+                    <div class="detailsDisplay">
+                        <p class="subId">{{employee.employeeId}}</p>
+                        <p class="subContact">Emergency Cont. # {{employee.ContactNo}}</p>
+                        <p class="empBlood">Blood Group  :  {{employee.BloodGroup | uppercase}}</p>
+                        <p class="empAddress">Address : {{employee.Address}}</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 tb1">
+                    <h5>Employee list:</h5>
+                    <table class="table table-striped table-bordered table-responsive tbInResource">
+                        <thead>
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Employee Name</th>
+                                <th>Title</th>
+                                <th>Competency</th>
+                                <th>Position</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="emp in employeeData track by $index">
+                                <td>{{emp.employeeId}}</td>
+                                <td>{{emp.employeeName | uppercase}}</td>
+                                <td>{{emp.title}}</td>
+                                <td>{{emp.competency}}</td>
+                                <td>{{emp.position}}</td>
+                                <td>
+                                    <img src="assets/images/edit.png" ng-click="editData($index)" id="edit">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- container ends -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Join CI</title>
+      <link rel="stylesheet" type="text/css" href="styles/reset.css">
+      <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/style.css">
+   </head>
+   <body ng-app="JoinCI">
+      <div class="container bg">
+         <header>
+            <div class="row up"></div>
+            <div class="row logo">
+               <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 " ui-view="header_section" id="header_user">
+                  <!--ui-view -->
+               </div>
+               <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 ">
+                  <a  href="#">
+                  <img alt="CI Logo" src="assets/images/logo.png">
+                  </a>
+                  <div class="clear"></div>
+               </div>
+            </div>
+         </header>
+      </div>
+      <!-- end of container -->
+      <main>
+         <div class="container" ui-view="main_section">
+            
+         </div>
+      </main>
+      <footer>
+         <div class="container">
+            Powered by CI Team
+         </div>
+      </footer>
+      <!-- scripts file starts -->
+      <!-- <script src="scripts/jquery-2.2.4.min.js"></script>
+      <script src="scripts/bootstrap.min.js"></script> -->
+      <script src="scripts/angular.min.js"></script>  
+      <script src="scripts/angular-ui-router.min.js"></script>
+      <script src="scripts/ngStorage.min.js"></script>
+      <script src="scripts/angular-messages.min.js"></script>
+      
+     
+      
+      <script src="scripts/main.js"></script>
+      <script src="scripts/controllers/loginController.js"></script>
+      <script src="scripts/services/loginService.js"></script>
+      <script src="scripts/controllers/employeeController.js"></script>
+      <script src="scripts/services/employeeService.js"></script>
+      <script src="scripts/controllers/headerController.js"></script>
+       <script src="scripts/controllers/resourceAddController.js"></script>
+       <script src="scripts/angular-random-string.js"></script>
+       <script src="scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
+   </body>
+</html>

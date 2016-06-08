@@ -1,0 +1,81 @@
+{  
+   "loginJsonData":[  
+      {  
+         "name":"Basha",
+         "role":"HR-Manager",
+         "password":"Pass123"
+      },
+      {  
+         "name":"Ramya",
+         "role":"HR-Manager",
+         "password":"Pass123"
+      },
+      {  
+         "name":"Raja",
+         "role":"HR-Staff",
+         "password":"Pass123"
+      },
+      {  
+         "name":"Ravi",
+         "role":"Manager",
+         "password":"Pass123"
+      }
+   ],
+   "employeeJsonData":[  
+      {  
+         "employeeId":"201201",
+         "employeeName":"S Sowmiya",
+         "title":"TL",
+         "position":"On-site",
+         "competency":"CI Web",
+         "ContactNo":"9865741235",
+         "BloodGroup":"B+",
+         "Address":"Sipcot Siruseri Chennai",
+         "img":"assets/images/sowmiya.jpg"
+      },
+      {  
+         "employeeId":"201202",
+         "employeeName":"Ankit Sharma",
+         "title":"PM",
+         "position":"On-site",
+         "competency":"CI Web",
+         "ContactNo":"8865741200",
+         "BloodGroup":"O+",
+         "Address":"TCO Chennai",
+         "img":"assets/images/ankit.PNG"
+      },
+      {  
+         "employeeId":"201203",
+         "employeeName":"Reshma",
+         "title":"PA",
+         "position":"Off-shore",
+         "competency":"CI Web",
+         "ContactNo":"7860041235",
+         "BloodGroup":"B-",
+         "Address":"Sipcot Siruseri Chennai",
+         "img":"assets/images/reshma.jpg"
+      },
+      {  
+         "employeeId":"201204",
+         "employeeName":"Saravana",
+         "title":"PAT",
+         "position":"Off-shore",
+         "competency":"CI Web",
+         "ContactNo":"7765749935",
+         "BloodGroup":"B+",
+         "Address":"Sipcot Siruseri Chennai",
+         "img":"assets/images/sarvanan.jpg"
+      },
+      {  
+         "employeeId":"201205",
+         "employeeName":"Niranjan",
+         "title":"PAT",
+         "position":"On-site",
+         "competency":"CI Web",
+         "ContactNo":"9865741235",
+         "BloodGroup":"B+",
+         "Address":"CKC Shallinganallur Chennai",
+         "img":"assets/images/niranjan.PNG"
+      }
+   ]
+}

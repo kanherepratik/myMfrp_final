@@ -1,0 +1,34 @@
+
+      
+         
+            
+<div class="wrap">
+    <h2>Login</h2>
+    <form class="form-horizontal login"  name="userForm" role="form" ng-submit="submitForm(userForm.$valid)" novalidate>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">User name :</label>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="email" name="userName" ng-model="user.loginName" required>
+                    <div ng-messages="userForm.userName.$error" ng-if="userForm.userName.$dirty" style="color:red" role="alert" multiple>
+                        <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Valid Username</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password :</label>
+                <div class="col-md-3">
+                    <input type="password" class="form-control" id="pwd" name="pwd" ng-model="user.password" required>
+                        <div ng-messages="userForm.pwd.$error" ng-if="userForm.pwd.$dirty" style="color:red" role="alert" multiple>
+                            <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Valid Password</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group rem_btns">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default login_btn">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- end of container -->
+      

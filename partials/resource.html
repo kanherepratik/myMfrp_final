@@ -1,0 +1,159 @@
+
+   <div class="row heading_title">
+      <div >
+         <h3 id="heading">Request For Resource</h3>
+      </div>
+   </div>
+    <form class="col-md-6 col-xs-6 col-sm-6 col-lg-6 form-horizontal" name="reqForm" role="form" ng-model="reqForm" novalidate>
+      <h5>Profile:</h5>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label>Designation:</label>	
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <select class="drop" name="designation" ng-model="employee.designation" required>
+               <option></option>
+               <option>Programmer Analyst</option>
+               <option>Programmer Analyst Trainee</option>
+               <option>Associate</option>
+               <option>Sr. Associate</option>
+               <option>Manager</option>
+            </select>
+            <div ng-messages="reqForm.designation.$error"  ng-if="reqForm.designation.$touched" style="color:red" role="alert" >
+
+               <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Designation</div>
+                         
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label required >Experience in years:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="number" name="exp" ng-model="employee.experienceYears" required ng-maxlength="2" />
+            <div ng-messages="reqForm.exp.$error"  ng-if="reqForm.exp.$touched" style="color:red" role="alert" >
+
+                  <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Experience</div>
+                  <div ng-message="maxlength" class="ngmsg"><sup>*</sup>Enter the Valid Data</div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label >Numbers:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="number" name="num" ng-model="employee.number" required ng-maxlength="3" />
+            <div ng-messages="reqForm.num.$error"  ng-if="reqForm.num.$touched" style="color:red" role="alert" >
+
+                 <div ng-message="required" class="ngmsg"><sup>*</sup>Please Enter Your Requirement</div>
+                 <div ng-message="maxlength" class="ngmsg"><sup>*</sup>Enter The Valid Data</div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label>Skills:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 check">
+            <input type="checkbox" name="skill" value="HTML" ng-model="employee.skill.skill1" ng-true-value="'HTML'" >HTML
+            <input type="checkbox" name="skill" value="CSS" ng-model="employee.skill.skill2" ng-true-value="'CSS'" >CSS
+            <input type="checkbox" name="skill" value="Java Script" ng-model="employee.skill.skill3" ng-true-value="'Java Script'" >Java Script
+            <input type="checkbox" name="skill" value="JQ" ng-model="employee.skill.skill4" ng-true-value="'JQ'" >JQ
+            <input type="checkbox" name="skill" value="Flash" ng-model="employee.skill.skill5" ng-true-value="'Flash'" >Flash
+            <input type="checkbox" name="skill" value="Flex" ng-model="employee.skill.skill6" ng-true-value="'Flex'" >Flex
+           
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label for="comp">Competency:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <select class="drop" name="comp" ng-model="employee.competency" required>
+               <option></option>
+               <option>CI Web</option>
+               <option>CI RIA</option>
+            </select>
+            <div ng-messages="reqForm.comp.$error"  ng-if="reqForm.comp.$touched" style="color:red" role="alert" >
+
+                   <div ng-message="required" class="ngmsg"><sup>*</sup>Please Select Your Competency</div>
+                          
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label>Position:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <input type="radio" name="position" ng-model="employee.position" value="on-site" id="radio1" checked>On-Site
+            <input type="radio" name="position" ng-model="employee.position" value="off-shore" id="radio2">Off-shore
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <label for="comp">Location:</label>
+         </div>
+         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+            <select class="drop" name="loc" ng-model="employee.location" required>
+               <option></option>
+               <option>Chennai</option>
+               <option>Bangalore</option>
+               <option>Hyderabad</option>
+               <option>Pune</option>
+               <option>Kolkata</option>
+            </select>
+            <div ng-messages="reqForm.loc.$error"  ng-if="reqForm.loc.$touched" style="color:red" role="alert" >
+
+                         <div ng-message="required" class="ngmsg"><sup>*</sup>Please Select Your Preffered Location</div>
+                          
+            </div>
+         </div>
+      </div>
+      
+
+       <button type="submit" class="btn btn-default" ng-if="saveBtn" ng-model="saveBtn" id="save" ng-click="addData()" ng-disabled ="reqForm.$invalid">Save</button>
+      
+      <button type="submit" class="btn btn-default" ng-if="updateBtn"  ng-model="updateBtn" id="save" ng-click="addData()" ng-disabled ="reqForm.$invalid">Update</button>
+       <button type="reset" class="btn btn-default" ng-click="reset()">Reset</button>
+   </form>
+   <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6"></div>
+   <div class="row">
+      <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 tb1">
+         <h5>Request list:</h5>
+         <table class="table table-striped table-bordered table-responsive tbInResource">
+            <thead>
+               <tr>
+                  <th>Request ID</th>
+                  <th>Designation</th>
+                  <th>Position</th>
+                  <th>Skills</th>
+                  <th>No.</th>
+                  <th>Experience</th>
+                  <th>Competency</th>
+                  <th>Location</th>
+                  <th>Edit</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="emp in empData track by $index">
+                  <td>{{emp.requestId | uppercase}}</td>
+                  <td>{{emp.designation}}</td>
+                  <td>{{emp.experienceYears}}</td>
+                  <td><span ng-repeat="s in emp.skill">{{s }} </span></td>
+                  <td>{{emp.number}}</td>
+                  <td>{{emp.position}}</td>
+                  <td>{{emp.competency}}</td>
+                  <td>{{emp.location}}</td>
+                  <td><img src="assets/images/edit.png" id="edit" ng-click="editData($index)" ></td>
+               </tr>
+               
+               
+            </tbody>
+         </table>
+      </div>
+   </div>
+
+<!-- container ends -->
